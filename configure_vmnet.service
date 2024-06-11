@@ -1,0 +1,11 @@
+[Unit]  
+Description=Configure VMNet Devices  
+After=vmware-networks.service  
+Requires=vmware-networks.service  
+  
+[Service]  
+Type=oneshot  
+ExecStart=/usr/local/bin/configure_vmnet.sh  
+  
+[Install]  
+WantedBy=multi-user.target
